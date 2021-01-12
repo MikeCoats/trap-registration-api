@@ -22,25 +22,23 @@
   "dependencies": {
     "express": "^4.17.1",
     "morgan": "^1.10.0",
-    "notifications-node-client": "^4.7.2",
-    "pg": "^7.18.2",
+    "notifications-node-client": "^5.1.0",
+    "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^5.21.5",
-    "sequelize-cli": "^5.5.1",
-    "winston": "^3.2.1"
+    "sequelize": "^6.3.5",
+    "sequelize-cli": "^6.2.0",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "prettier": "^2.0.2",
-    "newman": "^4.6.0",
-    "sqlite3": "^5.0.0",
-    "start-server-and-test": "^1.10.11",
-    "xo": "^0.28.0"
+    "prettier": "^2.2.1",
+    "newman": "^5.2.2",
+    "sqlite3": "^5.0.1",
+    "start-server-and-test": "^1.11.7",
+    "xo": "^0.37.1"
   },
   "xo": {
     "space": 2,
     "prettier": true,
-    "parser": "babel-eslint",
     "rules": {
       "import/extensions": 0,
       "new-cap": 0
