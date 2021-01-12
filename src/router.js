@@ -61,7 +61,7 @@ router.put('/registrations/:id', async (request, response) => {
   try {
     // Try to parse the incoming ID to make sure it's really a number.
     const existingId = Number(request.params.id);
-    if (isNaN(existingId)) {
+    if (Number.isNaN(existingId)) {
       response.status(404).send({message: `Registration ${request.params.id} not valid.`});
       return;
     }
