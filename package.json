@@ -4,13 +4,12 @@
   "description": "",
   "author": "Mike Coats <mike.coats@nature.scot>",
   "repository": "github:Scottish-Natural-Heritage/trap-registration-api",
-  "type": "module",
   "scripts": {
     "lint": "xo",
     "premigrations": "npx sequelize-cli db:migrate --env preMigrations --migrations-path util/db/pre-migrations",
     "migrations": "npx sequelize-cli db:migrate  --env database",
     "prestart": "npm run lint && npm run migrations",
-    "start": "node --experimental-modules src/server.js",
+    "start": "node src/server.mjs",
     "nm:run": "newman run tests/trap-registration-api.postman_collection.json",
     "test": "start-server-and-test start http://localhost:3001/trap-registration-api/v1/health nm:run"
   },

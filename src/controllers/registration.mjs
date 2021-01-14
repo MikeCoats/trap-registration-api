@@ -1,7 +1,7 @@
-import db from '../models/index.js';
+import db from '../models/index.mjs';
 import Sequelize from 'sequelize';
 import NotifyClient from 'notifications-node-client';
-import config from '../config/app.js';
+import config from '../config/app.mjs';
 
 const {Registration} = db;
 

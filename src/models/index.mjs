@@ -1,7 +1,7 @@
-import dbConfig from '../config/database.js';
+import dbConfig from '../config/database.mjs';
 import Sequelize from 'sequelize';
 
-import Registration from './registration.js';
+import Registration from './registration.mjs';
 
 const sequelize = new Sequelize(dbConfig.database);
 

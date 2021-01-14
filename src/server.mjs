@@ -1,10 +1,10 @@
 'use strict';
 
 // Load the config.
-import config from './config/app.js';
+import config from './config/app.mjs';
 
 // Load the app.
-import app from './app.js';
+import app from './app.mjs';
 
 // Run it.
 app.listen(config.port, () => {

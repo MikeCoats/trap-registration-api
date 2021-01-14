@@ -1,9 +1,9 @@
 import express from 'express';
-import config from './config/app.js';
+import config from './config/app.mjs';
 
 const router = express.Router();
 
-import Registration from './controllers/registration.js';
+import Registration from './controllers/registration.mjs';
 
 // `/health` is a simple health-check end-point to test whether the service is up.
 router.get('/health', async (request, response) => {

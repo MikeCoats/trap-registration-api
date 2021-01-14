@@ -1,9 +1,9 @@
 import express from 'express';
 import morgan from 'morgan';
 
-import config from './config/app.js';
-import logger from './logger.js';
-import router from './router.js';
+import config from './config/app.mjs';
+import logger from './logger.mjs';
+import router from './router.mjs';
 
 const app = express();
 

@@ -1,7 +1,9 @@
-const config = require('./app');
+import config from './app.mjs';
+
+let dbConfig;
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = {
+  dbConfig = {
     preMigrations: {
       username: 'licensing',
       password: config.licensingPassword,
@@ -22,7 +24,7 @@ if (process.env.NODE_ENV === 'production') {
     }
   };
 } else {
-  module.exports = {
+  dbConfig = {
     preMigrations: {
       dialect: 'sqlite',
       storage: './.development.db'
@@ -33,3 +35,5 @@ if (process.env.NODE_ENV === 'production') {
     }
   };
 }
+
+export {dbConfig as default};
