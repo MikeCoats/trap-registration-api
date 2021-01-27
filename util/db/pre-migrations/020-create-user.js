@@ -9,27 +9,27 @@ if (process.env.NODE_ENV === 'production') {
   const config = require('../../../src/config/database').production;
 
   module.exports = {
-    up: (queryInterface, Sequelize) => {
-      return queryInterface.sequelize.query('create role traps with noinherit login password :trapsPassword;', {
+    up: async (queryInterface, Sequelize) => {
+      await queryInterface.sequelize.query('create role traps with noinherit login password :trapsPassword;', {
         type: Sequelize.QueryTypes.RAW,
         replacements: {
-          trapsPassword: config.password
+          trapsPassword: config.trapsPassword
         }
       });
     },
-    down: (queryInterface, Sequelize) => {
-      return queryInterface.sequelize.query('drop role traps;', {
+    down: async (queryInterface, Sequelize) => {
+      await queryInterface.sequelize.query('drop role traps;', {
         type: Sequelize.QueryTypes.RAW
       });
     }
   };
 } else {
   module.exports = {
-    up: () => {
-      return Promise.resolve();
+    up: async () => {
+      await Promise.resolve();
     },
-    down: () => {
-      return Promise.resolve();
+    down: async () => {
+      await Promise.resolve();
     }
   };
 }
